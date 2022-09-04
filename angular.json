@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "jsim-lazy-expandable": {
+      "projectType": "library",
+      "root": "projects/jsim-lazy-expandable",
+      "sourceRoot": "projects/jsim-lazy-expandable/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/jsim-lazy-expandable/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/jsim-lazy-expandable/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/jsim-lazy-expandable/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/jsim-lazy-expandable/src/test.ts",
+            "tsConfig": "projects/jsim-lazy-expandable/tsconfig.spec.json",
+            "karmaConfig": "projects/jsim-lazy-expandable/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "jsim-lazy-expandable"
 }

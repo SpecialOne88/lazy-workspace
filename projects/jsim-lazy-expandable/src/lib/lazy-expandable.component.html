@@ -1,0 +1,16 @@
+<div class="lazy-exp-container" [class.is-open]="isOpen" [style.height]="contentHeight" [class.disabled]="disabled">
+    <div class="lazy-exp-header" (click)="toggleOpen()" [style.height]="headerHeightStyle">
+        <div class="lazy-exp-header-title">
+            <ng-content select="[exp-header-title]"></ng-content>
+        </div>
+        <div class="lazy-exp-header-subtitle">
+            <ng-content select="[exp-header-subtitle]"></ng-content>
+        </div>
+        <div *ngIf="!hideIcon" class="lazy-exp-header-icon"></div>
+    </div>
+    <div #lazyContent class="lazy-exp-content">
+        <div class="lazy-exp-content-container">
+            <ng-content select="[exp-content]"></ng-content>
+        </div>
+    </div>
+</div>

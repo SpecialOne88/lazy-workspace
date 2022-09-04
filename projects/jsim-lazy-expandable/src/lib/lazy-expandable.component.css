@@ -1,0 +1,61 @@
+.lazy-exp-container {
+    --background-color: white;
+    --background-color-hover: rgba(0,0,0,.04);
+    --icon-color: rgb(119, 119, 119);
+    border-radius: 4px;
+    box-shadow: 0 3px 1px -2px #0003,0 2px 2px #00000024,0 1px 5px #0000001f;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+.lazy-exp-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: height 225ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lazy-exp-container:not(.is-open):not(.disabled) .lazy-exp-header:hover {
+    background-color: var(--background-color-hover);
+}
+
+.lazy-exp-container.disabled .lazy-exp-header {
+    cursor: not-allowed;
+}
+
+.lazy-exp-header-title {
+    margin-left: 1rem;
+    width: 50%;
+}
+
+.lazy-exp-header-subtitle {
+    width: 50%;
+    color: rgb(46, 46, 46);
+}
+
+.lazy-exp-header-icon {
+    justify-self: flex-end;
+    margin-right: 1rem;
+    transform: rotate(0deg);
+    transition: transform 200ms ease-out;
+}
+
+.is-open .lazy-exp-header-icon {
+    transform: rotate(180deg);
+}
+
+.lazy-exp-header-icon::after {
+    border-color: var(--icon-color);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    vertical-align: middle;
+}
+
+.lazy-exp-content {
+    box-sizing: border-box;
+    padding: 1rem;
+}

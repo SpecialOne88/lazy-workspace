@@ -8,6 +8,12 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "jsim-lazy-expandable": [
+        "dist/jsim-lazy-expandable/jsim-lazy-expandable",
+        "dist/jsim-lazy-expandable"
+      ]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
