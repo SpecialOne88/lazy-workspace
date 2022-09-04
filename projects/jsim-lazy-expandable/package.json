@@ -1,6 +1,6 @@
 {
   "name": "jsim-lazy-expandable",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
@@ -12,5 +12,9 @@
   "author": {
     "name": "Joao Simao"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "Git",
+    "url": "https://github.com/SpecialOne88/lazy-workspace/tree/master/projects/jsim-lazy-expandable"
+  }
 }
